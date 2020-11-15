@@ -13,7 +13,7 @@ module.exports = options => {
     const customHighlightClassName = options.highlightClassName || `gridsome-highlight`;
     const codeTitleClassName = options.codeTitleClassName || 'gridsome-code-title';
     const classPrefix = options.classPrefix || 'language-';
-    const classPrefixInline = options.classPrefix || 'inline-language-';    
+    const classPrefixInline = options.classPrefix || 'language-inline-';    
     const inlineCodeMarker = options.inlineCodeMarker || null;
     const aliases = options.aliases || {};
     const noInlineHighlight = options.noInlineHighlight || false;
@@ -110,7 +110,7 @@ module.exports = options => {
             const className = `${classPrefix}${languageName}`
       
             node.type = `html`
-            node.value = `<code class="${className} ${classInlineName}">${highlightCode(
+            node.value = `<code class="${classInlineName}">${highlightCode(
               languageName,
               node.value
             )}</code>`
