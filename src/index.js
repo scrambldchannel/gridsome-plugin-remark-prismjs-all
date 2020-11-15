@@ -110,7 +110,7 @@ module.exports = options => {
             const className = `${classPrefix}${languageName}`
       
             node.type = `html`
-            node.value = `<code class="${classInlineName} ${className}">${highlightCode(
+            node.value = `<code class="${className} ${classInlineName}">${highlightCode(
               languageName,
               node.value
             )}</code>`
